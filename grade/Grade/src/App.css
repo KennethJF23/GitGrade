@@ -12,9 +12,9 @@
 
 /* Container */
 .container {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 32px;
 }
 
 /* Header */
@@ -27,9 +27,9 @@
 }
 
 .header-content {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 60px;
+  padding: 1rem 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,8 +38,8 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 1.75rem;
+  gap: 0.6rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #1e293b;
   cursor: pointer;
@@ -51,7 +51,7 @@
 
 .nav {
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
@@ -60,7 +60,7 @@
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   position: relative;
 }
 
@@ -85,21 +85,21 @@
 
 /* Hero Section */
 .hero-section {
-  padding: 60px 60px 80px;
+  padding: 40px 32px 56px;
   text-align: center;
 }
 
 .hero-content {
-  max-width: 1500px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: #1e293b;
   line-height: 1.15;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
@@ -112,11 +112,11 @@
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   color: #64748b;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-  max-width: 1200px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -126,26 +126,26 @@
 }
 
 .hero-input-wrapper {
-  max-width: 1400px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .input-group {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   background: white;
-  padding: 0.75rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   border: 1px solid #f1f5f9;
 }
 
 .hero-input {
   flex: 1;
-  padding: 1.5rem 2rem;
-  font-size: 1.2rem;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
   border: none;
-  border-radius: 14px;
+  border-radius: 10px;
   outline: none;
   background: transparent;
   color: #334155;
@@ -157,13 +157,13 @@
 }
 
 .hero-button {
-  padding: 1.5rem 3.5rem;
-  font-size: 1.2rem;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: white;
   background: #1e293b;
   border: none;
-  border-radius: 14px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
@@ -184,9 +184,9 @@
 .hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 0 12px;
 }
 
 .stat-item {
@@ -195,14 +195,14 @@
 }
 
 .stat-number {
-  font-size: 3.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
   background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .stat-label {
@@ -217,9 +217,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 28px 16px;
 }
 
 .results-page {
@@ -230,15 +230,15 @@
 
 .results-container {
   flex: 1;
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 60px;
+  padding: 28px 32px;
   width: 100%;
 }
 
 /* Features Section */
 .features-section {
-  padding: 80px 60px;
+  padding: 48px 32px;
   background: white;
 }
 
@@ -248,10 +248,10 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: #1e293b;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem;
   line-height: 1.2;
 }
 
@@ -265,16 +265,16 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 
 .feature-card {
   background: #f8fafc;
-  padding: 2rem;
-  border-radius: 16px;
+  padding: 1.2rem;
+  border-radius: 12px;
   border: 1px solid #e2e8f0;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .feature-card:hover {
@@ -283,83 +283,83 @@
 }
 
 .feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
 }
 
 .feature-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .feature-description {
   color: #64748b;
-  line-height: 1.6;
-  font-size: 0.95rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 /* How It Works Section */
 .how-it-works-section {
-  padding: 80px 60px;
+  padding: 48px 32px;
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 4rem;
-  max-width: 1600px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .step-card {
   text-align: center;
-  padding: 2rem 1.5rem;
+  padding: 1.2rem 1rem;
 }
 
 .step-number {
-  width: 70px;
-  height: 70px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
   color: white;
   border-radius: 50%;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
-  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
+  margin: 0 auto 1rem;
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.25);
 }
 
 .step-title {
-  font-size: 1.35rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .step-description {
   color: #64748b;
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 /* Footer */
 .footer {
   background: #1e293b;
   color: white;
-  padding: 3.5rem 60px 2rem;
+  padding: 2rem 32px 1.5rem;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 5rem;
-  margin-bottom: 3rem;
-  max-width: 1600px;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
