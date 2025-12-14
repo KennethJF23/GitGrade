@@ -1,6 +1,6 @@
 # GitGrade 🎯
 
-A modern web application that analyzes and scores GitHub repositories, providing comprehensive insights and development roadmaps.
+GitGrade is a web app that analyzes GitHub repositories and produces a score, concise summary, and a practical roadmap for improvement. It's built as a fast Vite + React frontend with a small service layer that queries the GitHub REST API and (optionally) an LLM for richer summaries.
 
 ## Features ✨
 
@@ -30,29 +30,33 @@ A modern web application that analyzes and scores GitHub repositories, providing
 - Node.js (v16 or higher)
 - npm or yarn
 
-### Installation
+### Install
 
 1. Install dependencies
+
 ```bash
 npm install
 ```
 
-2. Start the development server
+2. Create a `.env` file in the project root (see `env` section below)
+
+3. Start the development server
+
 ```bash
 npm run dev
 ```
 
-3. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser at `http://localhost:5173`
 
 ## Usage 📖
 
-1. Enter a GitHub repository URL (e.g., `https://github.com/facebook/react`)
-2. Click "Analyze Repository"
-3. View the comprehensive analysis including:
-   - Overall score and grade
-   - Score breakdown by category
-   - Strengths and improvement areas
-   - Development roadmap with phased tasks
+1. Enter a GitHub repository URL (example: `https://github.com/facebook/react`).
+2. Click "Analyze Repository".
+3. The app will fetch repository data and display:
+  - Overall score and grade
+  - Score breakdown by category
+  - Strengths and recommended improvements
+  - A phased development roadmap
 
 ## Scoring Methodology 📊
 
@@ -64,44 +68,49 @@ The scoring system evaluates repositories across multiple dimensions:
 - **Code Quality**: Issue management, topics, project organization
 - **Maintenance**: Update frequency and branch management
 
-## API Rate Limiting ⚠️
+## Environment variables / Secrets
 
-This application uses the GitHub API without authentication, which has a rate limit of 60 requests per hour per IP address. For higher limits, you can:
+The app supports the following environment variables (place them in `.env` in the project root):
 
-1. Generate a GitHub Personal Access Token
-2. Add it to the axios requests in `src/services/githubService.js`
+- `VITE_GITHUB_TOKEN` — optional GitHub Personal Access Token (PAT) to increase API rate limits. Without this, unauthenticated requests are limited by GitHub (60 req/hour per IP).
+- `VITE_LLM_API_KEY` — optional OpenAI-style key (development only). **Warning:** `VITE_` variables are embedded into the client bundle and therefore exposed to users. For production, do not store secrets in `VITE_` variables; instead create a backend proxy endpoint that keeps keys server-side.
+- `VITE_GEMINI_API_KEY` — optional Gemini key (development only). Same exposure caveat applies.
+
+Example `.env` (development / local only):
+
+```env
+VITE_GITHUB_TOKEN=your_github_pat_here
+VITE_LLM_API_KEY=your_openai_key_here
+VITE_GEMINI_API_KEY=your_gemini_key_here
+```
+
+Security note: Do not commit `.env` to source control. For production, move tokens to server-side environment variables and implement an `/api/llm` proxy for LLM calls.
 
 ## Project Structure 📁
 
 ```
 src/
-├── components/
-│   ├── RepoInput.jsx      # URL input component
-│   ├── ScoreDisplay.jsx   # Score visualization
-│   ├── Summary.jsx        # Analysis summary
-│   └── Roadmap.jsx        # Development roadmap
-├── services/
-│   └── githubService.js   # GitHub API integration
-├── App.jsx                # Main application component
-├── App.css                # Application styles
-└── main.jsx               # Entry point
+├── components/           # React UI components
+├── services/             # API integration and analysis logic
+│   └── githubService.js  # Fetch & analyze GitHub data
+├── App.jsx               # Main application component
+├── App.css               # Styles
+└── main.jsx              # Vite entry
 ```
 
 ## Future Enhancements 🔮
 
-- [ ] GitHub authentication for higher API limits
-- [ ] Historical score tracking
-- [ ] Repository comparison feature
-- [ ] Export reports as PDF
-- [ ] Support for private repositories
-- [ ] Detailed code quality metrics
-- [ ] Integration with CI/CD platforms
+- Move LLM and GitHub secrets server-side (recommended)
+- Add GitHub App integration for fine‑grained repo permissions
+- Historical score tracking and comparisons
+- Exportable reports (PDF)
+- Private repository support and CI/CD integration
 
 ## Contributing 🤝
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions welcome — please open a Pull Request or an issue for ideas and fixes.
 
 ## License 📄
 
-This project is open source and available under the MIT License.
+MIT
 
